@@ -1,3 +1,23 @@
-.beRed {
-    background-color: red;
+body{
+    background-color: rgb(233, 206, 223);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
+
+h1{
+    text-align: center;
+   
+}
+
+button{
+    font-size: medium;
+    border-radius:5px;    
+
+}
+
+button:hover {
+    background-color:rgb(175, 163, 163) ;
+    opacity: 0.90;
+  
+}
+
