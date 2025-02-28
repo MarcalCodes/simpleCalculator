@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>My Calculator</title>
+  </head>
+  <body>
+      <h1>Simple Calculator</h1>
 
-    <input type="number" id="number1">
-    <input type="number" id="number2">
+      <input type="number" id="number1" />
 
-    <div id="resultElement"></div>
+      <!-- Steps:
+            1. Add the dropdown HTML element allowing the user to select the operator. The default operator value is '+'. The `id` of this element must be `'operatorElementId'`
+            2. Implement the `getOperator` JS function. This function is:
+                - selecting the dropdown HTML element by its ID passed as a parameter to the `getOperator` JS function.
+                - get the value of the user-selected operator
+                - return the user-selected operator
+        -->
 
-    <button type="button" onclick='setResult(calculator(getNumber("number1"), getNumber("number2"), "+"))'>Calculate</button>
+      <select id="operatorElementId">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+      </select>
 
+      <input type="number" id="number2" />
 
+      <button
+        type="button"
+        onclick='setResult("resultElement", doCalculation("number1", "number2", "operatorElementId"))'
+      >
+        =
+      </button>
 
+      <div id="resultElement"></div>
+    </div>
     <script src="assets/script.js"></script>
-</body>
+  </body>
 </html>
