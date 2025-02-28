@@ -7,36 +7,33 @@
     <title>My Calculator</title>
   </head>
   <body>
-      <h1>Simple Calculator</h1>
+    <h1>Simple Calculator</h1>
+    <div class="flex-container">
+      <div class="flex-container">
+        <input type="number" id="number1" />
 
-      <input type="number" id="number1" />
+        <select id="operatorElementId">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">x</option>
+          <option value="/">/</option>
+        </select>
 
-      <!-- Steps:
-            1. Add the dropdown HTML element allowing the user to select the operator. The default operator value is '+'. The `id` of this element must be `'operatorElementId'`
-            2. Implement the `getOperator` JS function. This function is:
-                - selecting the dropdown HTML element by its ID passed as a parameter to the `getOperator` JS function.
-                - get the value of the user-selected operator
-                - return the user-selected operator
-        -->
+        <input type="number" id="number2" />
 
-      <select id="operatorElementId">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">x</option>
-        <option value="/">/</option>
-      </select>
-
-      <input type="number" id="number2" />
-
-      <button
-        type="button"
-        onclick='setResult("resultElement", doCalculation("number1", "number2", "operatorElementId"))'
-      >
-        =
-      </button>
-
-      <div id="resultElement"></div>
+        <button
+          type="button"
+          id="calculateButton"
+          onclick='setResult("resultElement", doCalculation("number1", "number2", "operatorElementId"))'
+        >
+          =
+        </button>
+      </div>
+      <div class="flex-container">
+        <div id="resultElement"></div>
+      </div>
     </div>
+
     <script src="assets/script.js"></script>
   </body>
 </html>
