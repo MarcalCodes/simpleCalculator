@@ -1,4 +1,3 @@
-// function for my simple calculator
 
 // bellow are different ways to write my function
 
@@ -15,6 +14,9 @@
 //const getNumber1 = () => getNumber("number1")
 //const getNumber2 = () => getNumber("number2")
 
+
+
+
 const setResult = (resultElementId, result) => {
   const elem = document.getElementById(resultElementId); // here is always selecting the same element in the page bc will always put the result in this element
   elem.textContent = result;
@@ -25,11 +27,6 @@ const getNumber = (inputId) => {
   return Number(elem.value); // this is the way to to transfor a string into a number otherwise will concatenate
 };
 
-// Implement the `getOperator` JS function. This function is:
-// - selecting the dropdown HTML element by its ID passed as a parameter to the `getOperator` JS function.
-// - get the value of the user-selected operator out of the previously selected HTML element
-// - return the user-selected operator
-//
 
 const getDropdownValue = (dropdownId) => {
   // the paramenter (dropdownId) here could be any, but we need to create a name that help to understand what it is about.
@@ -63,6 +60,7 @@ const doCalculation = (inputId1, inputId2, dropdownId) => {
   return result;
 };
 
+// here we got inspired by Scott's code - which he shared in the group 
 document.addEventListener("keydown", (event) => {
   const key = event.key;
 
