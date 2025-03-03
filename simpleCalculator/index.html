@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>My Calculator</title>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <div class="flex-container">
+      <div class="flex-container">
+        <input type="number" id="number1" />
+
+        <select id="operatorElementId">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">x</option>
+          <option value="/">/</option>
+        </select>
+
+        <input type="number" id="number2" />
+
+        <button
+          type="button"
+          id="calculateButton"
+          onclick='setResult("resultElement", doCalculation("number1", "number2", "operatorElementId"))'
+        >
+          =
+        </button>
+      </div>
+      <div class="flex-container">
+        <div id="resultElement"></div>
+      </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

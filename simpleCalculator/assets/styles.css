@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(233, 206, 223);
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  font-size: medium;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(175, 163, 163);
+  opacity: 0.9;
+}
+
+/* Flex Container for Horizontal Layout */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  gap: 5px;
+  justify-content: space-evenly;
+  height: 30px;
+}
+
+#resultElement {
+  background-color: white;
+  flex: auto;
+  width: 95%;
+  min-width: 100px;
+  border: 1px black;
+  border-style: solid;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+}
